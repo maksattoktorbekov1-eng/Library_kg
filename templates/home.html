@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LibraryKG</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<header>
+    <h1>Добро пожаловать в LibraryKG</h1>
+</header>
+<main>
+    <a href="{% url 'book_list' %}">Перейти к списку книг</a>
+</main>
+</body>
+</html>
