@@ -1,9 +1,11 @@
 from django.contrib import admin
 from django.urls import path, include
-from .views import home_view
+from books import views as book_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home_view, name='home'),
+    path('', book_views.home, name='home'),
     path('books/', include('books.urls')),
+    path('auth/', include('registration.urls')),
+    path('captcha/', include('captcha.urls')),
 ]

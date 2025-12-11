@@ -4,6 +4,9 @@ from .models import Book
 from .forms import BookForm, ReviewForm
 import datetime
 
+def home(request):
+    return render(request, 'books/home.html')
+
 def book_list(request):
     books = Book.objects.all()
     return render(request, 'books/book_list.html', {"books": books})
